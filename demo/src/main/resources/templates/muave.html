@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/muave.css">
+    <style>
+        .selected {
+            background: rgb(58, 78, 203);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="gradien"></div>
+        <div class="nav container">
+            <a href="" class="logo"><img src="./image/white-2018.png" alt=""></a>
+
+            <div class="rights">
+                <div class="right">
+                    <div class="search">
+                        <input type="search" name="" id="search-input" placeholder="Search Movie">
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <a href="#" class="language">
+                        <p>
+                            EN
+                        </p>
+                    </a>
+                    <a href="#" class="user">
+                        <img src="../asmjava6/img/user.jpg" alt="" class="user-img">
+                    </a>
+                </div>
+
+                <div class="navbar">
+                    <a href="#" class="nav-home"><i class='bx bx-home-heart'></i></a>
+                    <div class="menu">
+                        <ul>
+                            <li class="start"><a href="./index.html" class="nav-link">Phim</a></li>
+                            <li><a href="./lichchieu.html" class="nav-link">Lịch chiếu</a></li>
+                            <li><a href="" class="nav-link">Rạp và giá</a></li>
+                            <li><a href="" class="nav-link">Khuyến mãi</a></li>
+                            <li><a href="" class="nav-link">Hỏi và đáp</a></li>
+                            <li><a href="" class="nav-link">Tin tức</a></li>
+                            <li> <a href="" class="nav-link">Giới thiệu</a></li>
+                            <li class="end"><a href="" class="nav-link">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <img src="./image/bg-body.png" alt="" class="main-header">
+    <main>
+        <div class="order-flim">
+            <div class="text-1">
+                <h4 style="color: white; text-transform: uppercase;">Tên phim</h4>
+                <h2 style="color: white; text-transform: uppercase; font-size: 30px;">Tà chú cấm</h2>
+            </div>
+
+            <div class="order-infor">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th class="cell-1">Chọn suất chiếu<br>
+                                <p>14:40</p>
+                            </th>
+                            <th class="cell-1">Ngày<br>
+                                <p>20/7/2023</p>
+                            </th>
+                            <th class="cell-2">Số lượng vé <br>
+                                <p>0 vé</p>
+                            </th>
+                            <th class="cell-2">Tổng số tiền <br>
+                                <p>0 đ</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="color: white;">Số ghế</th>
+                            <th colspan="3" style="color: white; font-size: 27px; height: 40px;" class="number-chair">
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="order-ticket">
+            <div class="order-all">
+                <div class="order-table">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th class="cell-3">Loại vé<br>
+
+                                </th>
+                                <th class="cell-3">Số lượng<br>
+
+                                </th>
+                                <th class="cell-4">Giá vé (VND) <br>
+
+                                </th>
+                                <th class="cell-4">Tổng số tiền<br>
+
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th style="color:black;" class="ticket-adult-couple">Người lớn (ĐÔI)</th>
+                                <th style="color:black; background: gray;" class="ticket-adult-couple">
+                                    <div class="buy-amount">
+                                        <button class="minus-btn" onclick="handelMinus()"><i
+                                                class='bx bx-minus'></i></button>
+                                        <input type="text" name="amount" id="amount" value="0" disabled>
+                                        <button class="plus-btn" onclick="handelPlus()"><i
+                                                class='bx bx-plus'></i></button>
+                                    </div>
+                                </th>
+                                <th style="color:black;" class="ticket-adult-couple">95.000 đ</th>
+                                <th style="color:black;" class="ticket-adult-couple">95.000 đ</th>
+                            </tr>
+                            <tr>
+                                <th style="color:black;" class="ticket-adult-single">Người lớn (ĐƠN)</th>
+                                <th style="color:black; background: gray;" class="ticket-adult-single">
+                                    <div class="buy-amount">
+                                        <button class="minus-btn" onclick="handelMinusSingle()"><i
+                                                class='bx bx-minus'></i></button>
+                                        <input type="text" name="amount-single" id="amountSingle" value="0" disabled>
+                                        <button class="plus-btn" onclick="handelPlusSingle()"><i
+                                                class='bx bx-plus'></i></button>
+                                    </div>
+                                </th>
+                                <th style="color:black;" class="ticket-adult-single">45.000 đ</th>
+                                <th style="color:black;" class="ticket-adult-single">45.000 đ</th>
+                            </tr>
+                            <script>
+                                let amountElement = document.getElementById('amount');
+                                let getAmount = amountElement.value;
+
+                                let amountSingle = document.getElementById('amountSingle')
+                                let getAmountSingle = amountSingle.value
+                                //
+                                let render = (getAmount) => {
+                                    amountElement.value = getAmount
+                                }
+                                let handelPlus = () => {
+                                    getAmount++
+                                    render(getAmount)
+                                    console.log(getAmount)
+                                }
+                                let handelMinus = () => {
+                                    if (getAmount > 0) {
+                                        getAmount--
+                                        if (getAmount == 0) {
+                                            amountElement.value = 0
+                                        }
+                                        render(getAmount)
+                                    }
+
+                                }
+                                //
+
+                                let handelPlusSingle = () => {
+                                    getAmountSingle++
+
+                                    amountSingle.value = getAmountSingle
+
+                                }
+                                let handelMinusSingle = () => {
+                                    if (getAmountSingle > 0) {
+                                        getAmountSingle--
+                                        if (getAmountSingle == 0) {
+                                            amountSingle.value = 0
+                                        }
+
+                                        amountSingle.value = getAmountSingle
+
+                                    }
+
+                                }
+                                //
+                            </script>
+
+                            <tr>
+                                <th style="color:gray; text-transform: uppercase;" class="ticket-adult-single"
+                                    colspan="2">
+                                    Số
+                                    lượng : <b style="color:black; text-transform: uppercase;">0 vé</b> </th>
+
+                                <th style="color:gray; text-transform: uppercase;" class="ticket-adult-single"
+                                    colspan="2">
+                                    Tổng
+                                    số tiền: <b style="color:black; text-transform: uppercase;">0 đ</b></th>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="buy-watercorn">
+            <div class="all-watercorn">
+                <div class="table-watercorn">
+                    <h2 class="title-watercorn">Bắp rang</h2>
+                    <div class="list-watercorn">
+                        <div class="text-watercorn">
+                            <h2>Bắp rang 60OZ</h2>
+                            <p>Bắp rang 60OZ</p>
+                            <h3>Giá: 49.000 đ</h3>
+                        </div>
+                        <div class="img-watercorn">
+                            <img src="./image/bap-ngot-100x100.jpg" alt="">
+                        </div>
+                        <div class="minus-plus-watercorn">
+                            <div class="minus-plus-form">
+                                <button class="minus-BR60OZ" onclick="handleMinusBR60OZ()"><i
+                                        class='bx bx-minus'></i></button>
+                                <input type="text" disabled value="0" id="BR60OZ">
+                                <button class="plus-BR60OZ" onclick="handlePlusBR60OZ()"><i
+                                        class='bx bx-plus'></i></button>
+                            </div>
+                        </div>
+                        <div class="total-watercorn">
+                            <b>49.000 đ</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-watercorn">
+                    <!-- <h2 class="title-watercorn1">Bắp rang</h2> -->
+                    <div class="list-watercorn" style="background-color: gainsboro;">
+                        <div class="text-watercorn">
+                            <h2>Nấm caramel 60OZ</h2>
+                            <p>Nấm caramel 60OZ</p>
+                            <h3>Giá: 55.000 đ</h3>
+                        </div>
+                        <div class="img-watercorn">
+                            <img src="./image/bap-ngot-100x100.jpg" alt="">
+                        </div>
+                        <div class="minus-plus-watercorn">
+                            <div class="minus-plus-form">
+                                <button class="minus-CRL60OZ" onclick="handleMinusCRL60OZ()"><i
+                                        class='bx bx-minus'></i></button>
+                                <input type="text" disabled value="0" id="CRL60OZ">
+                                <button class="plus-CRL60OZ" onclick="handlePlusCRL60OZ()"><i
+                                        class='bx bx-plus'></i></button>
+                            </div>
+                        </div>
+                        <div class="total-watercorn">
+                            <b>55.000 đ</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-watercorn">
+                    <!-- <h2 class="title-watercorn1">Bắp rang</h2> -->
+                    <div class="list-watercorn">
+                        <div class="text-watercorn">
+                            <h2>Nấm phô mai 60OZ</h2>
+                            <p>Nấm phô mai 60OZ</p>
+                            <h3>Giá: 55.000 đ</h3>
+                        </div>
+                        <div class="img-watercorn">
+                            <img src="./image/bap-ngot-100x100.jpg" alt="">
+                        </div>
+                        <div class="minus-plus-watercorn">
+                            <div class="minus-plus-form">
+                                <button class="minus-CRL60OZ" onclick="handleMinusPM60OZ()"><i
+                                        class='bx bx-minus'></i></button>
+                                <input type="text" disabled value="0" id="PM60OZ">
+                                <button class="plus-CRL60OZ" onclick="handlePlusPM60OZ()"><i
+                                        class='bx bx-plus'></i></button>
+                            </div>
+                        </div>
+                        <div class="total-watercorn">
+                            <b>55.000 đ</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-watercorn">
+                    <h2 class="title-watercorn1">Combo - v1</h2>
+                    <div class="list-watercorn">
+                        <div class="text-watercorn">
+                            <h2>Combo solo - vol1</h2>
+                            <p>1 Bắp ngọt 60oz + 1 Coke 22oz - V</p>
+                            <h3>Giá: 75.000 đ</h3>
+                        </div>
+                        <div class="img-watercorn">
+                            <img src="./image/combo-solo-100x100.jpg" alt="">
+                        </div>
+                        <div class="minus-plus-watercorn">
+                            <div class="minus-plus-form">
+                                <button><i class='bx bx-minus'></i></button>
+                                <input type="text" disabled>
+                                <button><i class='bx bx-plus'></i></button>
+                            </div>
+                        </div>
+                        <div class="total-watercorn">
+                            <b>55.000 đ</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-watercorn">
+                    <!-- <h2 class="title-watercorn1">Combo - v1</h2> -->
+                    <div class="list-watercorn" style="background-color: gainsboro;">
+                        <div class="text-watercorn">
+                            <h2>Combo cuple - vol1</h2>
+                            <p>1 Bắp ngọt 60oz + 2 Coke 32oz</p>
+                            <h3>Giá: 105.000 đ</h3>
+                        </div>
+                        <div class="img-watercorn">
+                            <img src="./image/combo-couiple-100x100.jpg" alt="">
+                        </div>
+                        <div class="minus-plus-watercorn">
+                            <div class="minus-plus-form">
+                                <button><i class='bx bx-minus'></i></button>
+                                <input type="text" disabled>
+                                <button><i class='bx bx-plus'></i></button>
+                            </div>
+                        </div>
+                        <div class="total-watercorn">
+                            <b>55.000 đ</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-watercorn">
+                    <!-- <h2 class="title-watercorn1">Combo - v1</h2> -->
+                    <div class="list-watercorn">
+                        <div class="text-watercorn">
+                            <h2>Combo party - vol1</h2>
+                            <p>2 Bắp ngọt 60oz + 4 Coke 32oz</p>
+                            <h3>Giá: 199.000 đ</h3>
+                        </div>
+                        <div class="img-watercorn">
+                            <img src="./image/combo-couiple-100x100.jpg" alt="">
+                        </div>
+                        <div class="minus-plus-watercorn">
+                            <div class="minus-plus-form">
+                                <button><i class='bx bx-minus'></i></button>
+                                <input type="text" disabled>
+                                <button><i class='bx bx-plus'></i></button>
+                            </div>
+                        </div>
+                        <div class="total-watercorn">
+                            <b>55.000 đ</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-watercorn">
+                    <h2 class="title-watercorn1">Nước đóng chai</h2>
+                    <div class="list-watercorn">
+                        <div class="text-watercorn">
+                            <h2>Nước suối dasani 500ml</h2>
+                            <p>Nước suối dasani 500ml</p>
+                            <h3>Giá: 16.000 đ</h3>
+                        </div>
+                        <div class="img-watercorn">
+                            <img src="./image/dasani-100x100.jpg" alt="">
+                        </div>
+                        <div class="minus-plus-watercorn">
+                            <div class="minus-plus-form">
+                                <button><i class='bx bx-minus'></i></button>
+                                <input type="text" disabled>
+                                <button><i class='bx bx-plus'></i></button>
+                            </div>
+                        </div>
+                        <div class="total-watercorn">
+                            <b>55.000 đ</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-watercorn">
+                    <h2 class="title-watercorn1">Nước ngọt</h2>
+                    <div class="list-watercorn" style="background-color: gainsboro;">
+                        <div class="text-watercorn">
+                            <h2>Coke 22OZ - V</h2>
+                            <p>Coke 22oz - V</p>
+                            <h3>Giá: 28.000 đ</h3>
+                        </div>
+                        <div class="img-watercorn">
+                            <img src="./image/coke-100x100.jpg" alt="">
+                        </div>
+                        <div class="minus-plus-watercorn">
+                            <div class="minus-plus-form">
+                                <button><i class='bx bx-minus'></i></button>
+                                <input type="text" disabled>
+                                <button><i class='bx bx-plus'></i></button>
+                            </div>
+                        </div>
+                        <div class="total-watercorn">
+                            <b>55.000 đ</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-watercorn">
+                    <!-- <h2 class="title-watercorn1">Nước ngọt</h2> -->
+                    <div class="list-watercorn" style="background-color:white">
+                        <div class="text-watercorn">
+                            <h2>Sprite 22OZ - V</h2>
+                            <p>Coke 22oz - V</p>
+                            <h3>Giá: 28.000 đ</h3>
+                        </div>
+                        <div class="img-watercorn">
+                            <img src="./image/sprite-100x100.png" alt="">
+                        </div>
+                        <div class="minus-plus-watercorn">
+                            <div class="minus-plus-form">
+                                <button><i class='bx bx-minus'></i></button>
+                                <input type="text" disabled>
+                                <button><i class='bx bx-plus'></i></button>
+                            </div>
+                        </div>
+                        <div class="total-watercorn">
+                            <b>55.000 đ</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                let getBR60OZ = document.getElementById('BR60OZ')
+                let BR60OZ = getBR60OZ.value
+
+                let getCRL60OZ = document.getElementById('CRL60OZ')
+                let CRL60OZ = getCRL60OZ.value
+
+                let getPM60OZ = document.getElementById('PM60OZ')
+                let PM60OZ = getCRL60OZ.value
+
+                let handleMinusBR60OZ = () => {
+                    if (BR60OZ > 0) {
+                        BR60OZ--
+                        if (BR60OZ == 0) {
+                            getBR60OZ.value = 0
+                        }
+                        getBR60OZ.value = BR60OZ
+                    }
+                }
+                let handlePlusBR60OZ = () => {
+                    BR60OZ++
+                    getBR60OZ.value = BR60OZ
+                }
+
+
+
+                let handleMinusCRL60OZ = () => {
+                    if (CRL60OZ > 0) {
+                        CRL60OZ--
+                        if (CRL60OZ == 0) {
+                            getCRL60OZ.value = 0
+                        }
+                        getCRL60OZ.value = CRL60OZ
+                    }
+                }
+                let handlePlusCRL60OZ = () => {
+                    CRL60OZ++
+                    getCRL60OZ.value = CRL60OZ
+                }
+
+                let handleMinusPM60OZ = () => {
+                    if (PM60OZ > 0) {
+                        PM60OZ--
+                        if (PM60OZ == 0) {
+                            getPM60OZ.value = 0
+                        }
+                        getPM60OZ.value = PM60OZ
+                    }
+                }
+                let handlePlusPM60OZ = () => {
+                    PM60OZ++
+                    getPM60OZ.value = PM60OZ
+                }
+            </script>
+        </div>
+        <div class="order-chair">
+            <div class="order-chair-list">
+                <div class="projection-screen">
+                    <b>Màn hình chiếu</b>
+                </div>
+                <div class="list-chair">
+                    <div class="chair">
+                        <div class="row-a">
+                            <div class="a01 a0" data-chair="A01" onclick="selectSeat(this)">A01</div>
+                            <div class="a01 a1" data-chair="A02" onclick="selectSeat(this)">A02</div>
+                            <div class="a01 a2" data-chair="A03" onclick="selectSeat(this)">A03</div>
+                            <div class="a01 a3" data-chair="A04" onclick="selectSeat(this)">A04</div>
+                            <div class="a01 a4" data-chair="A05" onclick="selectSeat(this)">A05</div>
+                            <div class="a01 a5" data-chair="A06" onclick="selectSeat(this)">A06</div>
+                            <div class="a01 a6" data-chair="A07" onclick="selectSeat(this)">A07</div>
+                            <div class="a01 a7" data-chair="A08" onclick="selectSeat(this)">A08</div>
+                            <div class="a01 a8" data-chair="A09" onclick="selectSeat(this)">A09</div>
+                            <div class="a01 a9" data-chair="A10" onclick="selectSeat(this)">A10</div>
+                        </div>
+                    </div>
+                    <div class="chair">
+                        <div class="row-b">
+                            <div class="b01 b0" data-chair="B01" onclick="selectSeat(this)">B01</div>
+                            <div class="b01 b1" data-chair="B02" onclick="selectSeat(this)">B02</div>
+                            <div class="b01 b2" data-chair="B03" onclick="selectSeat(this)">B03</div>
+                            <div class="b01 b3" data-chair="B04" onclick="selectSeat(this)">B04</div>
+                            <div class="b01 b4" data-chair="B05" onclick="selectSeat(this)">B05</div>
+                            <div class="b01 b5" data-chair="B06" onclick="selectSeat(this)">B06</div>
+                            <div class="b01 b6" data-chair="B07" onclick="selectSeat(this)">B07</div>
+                            <div class="b01 b7" data-chair="B08" onclick="selectSeat(this)">B08</div>
+                            <div class="b01 b8" data-chair="B09" onclick="selectSeat(this)">B09</div>
+                            <div class="b01 b9" data-chair="B10" onclick="selectSeat(this)">B10</div>
+                        </div>
+                    </div>
+                    <div class="chair">
+                        <div class="row-c">
+                            <div class="c01 c0" data-chair="C01" onclick="selectSeat(this)">C01</div>
+                            <div class="c01 c1" data-chair="C02" onclick="selectSeat(this)">C02</div>
+                            <div class="c01 c2" data-chair="C03" onclick="selectSeat(this)">C03</div>
+                            <div class="c01 c3" data-chair="C04" onclick="selectSeat(this)">C04</div>
+                            <div class="c01 c4" data-chair="C05" onclick="selectSeat(this)">C05</div>
+                            <div class="c01 c5" data-chair="C06" onclick="selectSeat(this)">C06</div>
+                            <div class="c01 c6" data-chair="C07" onclick="selectSeat(this)">C07</div>
+                            <div class="c01 c7" data-chair="C08" onclick="selectSeat(this)">C08</div>
+                            <div class="c01 c8" data-chair="C09" onclick="selectSeat(this)">C09</div>
+                            <div class="c01 c9" data-chair="C10" onclick="selectSeat(this)">C10</div>
+                        </div>
+                    </div>
+                    <div class="chair">
+                        <div class="row-a">
+                            <div class="a01-c ac0" data-chair="CP01" onclick="selectSeat(this)">CP01</div>
+                            <div class="a01-c ac1" data-chair="CP02" onclick="selectSeat(this)">CP02</div>
+                            <div class="a01-c ac2" data-chair="CP03" onclick="selectSeat(this)">CP03</div>
+                            <div class="a01-c ac3" data-chair="CP04" onclick="selectSeat(this)">CP04</div>
+                            <div class="a01-c ac4" data-chair="CP05" onclick="selectSeat(this)">CP05</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var selectedSeats = [];
+                var i = ''
+                function selectSeat(seat) {
+                    if (seat.style.backgroundColor === "") {
+                        // Chọn ghế
+                        seat.style.backgroundColor = "rgb(58, 78, 203)";
+                        selectedSeats.push(seat.innerHTML);
+                    } else {
+                        // Bỏ chọn ghế
+                        seat.style.backgroundColor = "";
+                        var index = selectedSeats.indexOf(seat.innerHTML);
+                        if (index > -1) {
+                            selectedSeats.splice(index, 1);
+                        }
+                    }
+                    console.log(selectedSeats)
+                    let number = document.querySelector('.number-chair')
+                    number.textContent = selectedSeats.join(', ').toString()
+                }
+            </script>
+        </div>
+        <div class="note-chair" style="background-color: white;padding: 15px;">
+            <div class="list-note-chair">
+                <div class="chair-normal">
+                </div>
+                <b>Ghế trống</b>
+                <div class="chair-couple">
+
+                </div>
+                <b>Ghế đôi</b>
+                <div class="chair-select">
+
+                </div>
+                <b>Ghế đã chọn</b>
+                <div class="chair-doing-select">
+
+                </div>
+                <b>Ghế đang chọn</b>
+            </div>
+        </div>
+        <div class="btn-pre-pay">
+            <a href="">
+                <div class="btnPre">
+                    <h3>Quay lại</h3>
+                </div>
+            </a>
+            <a href="./thanhtoan.html">
+                <div class="btnPre">
+                    <h3>Thanh toán</h3>
+                </div>
+            </a>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/chonsuat.css">
+</head>
+
+<body>
+    <header>
+        <div class="gradien"></div>
+        <div class="nav container">
+            <a href="" class="logo"><img src="./image/white-2018.png" alt=""></a>
+
+            <div class="rights">
+                <div class="right">
+                    <div class="search">
+                        <input type="search" name="" id="search-input" placeholder="Search Movie">
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <a href="#" class="language">
+                        <p>
+                            EN
+                        </p>
+                    </a>
+                    <a href="#" class="user">
+                        <img src="../asmjava6/img/user.jpg" alt="" class="user-img">
+                    </a>
+                </div>
+
+                <div class="navbar">
+                    <a href="#" class="nav-home"><i class='bx bx-home-heart'></i></a>
+                    <div class="menu">
+                        <ul>
+                            <li class="start"><a href="./index.html" class="nav-link">Phim</a></li>
+                            <li><a href="./lichchieu.html" class="nav-link">Lịch chiếu</a></li>
+                            <li><a href="" class="nav-link">Rạp và giá</a></li>
+                            <li><a href="" class="nav-link">Khuyến mãi</a></li>
+                            <li><a href="" class="nav-link">Hỏi và đáp</a></li>
+                            <li><a href="" class="nav-link">Tin tức</a></li>
+                            <li> <a href="" class="nav-link">Giới thiệu</a></li>
+                            <li class="end"><a href="" class="nav-link">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="register-content">
+        <img src="./image/setup-bg.jpg" alt="" class="bg-body">
+        <div class="login">
+            <div class="regsiter">
+                <img src="./image/icon-register.png" alt="">
+                <b>Đăng ký thành viên</b>
+                <img src="./image/icon-login.png" alt="" style="margin-left: 30px;">
+                <b>Đăng nhập</b>
+            </div>
+            <div class="call">
+                <img src="./image/icon-call.png" alt="">
+                <b>0123456789</b>
+            </div>
+        </div>
+    </div>
+    <!--image slider start-->
+    <div class="slide">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./image/c'member.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/c'monday.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/c'ten.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./image/hssv-340px.jpg" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                autoplay: {
+                    delay: 2000, // số mili giây giữa mỗi lần chuyển slide
+                    disableOnInteraction: false,
+                },
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+    </div>
+
+    <div class="gradien" style="margin-top: 35px;"></div>
+    <div class="select-movie">
+        <div class="ticket">
+            <img src="./image/icon-ticket.png" alt="" class="img-ticket">
+            <h2>Mua vé <br> online</h2>
+        </div>
+        <div class="all-select">
+            <div class="select">
+                <select class="select-flim">
+                    <option value="">Chọn phim</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                </select>
+                <select class="select-date">
+                    <option value="">Chọn ngày</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                </select>
+            </div>
+
+            <div class="select">
+                <select class="select-cinema">
+                    <option value="">Chọn rạp</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                </select>
+                <select class="select-time">
+                    <option value="">Chọn suất chiếu</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="buy-tickets">
+            <div class="select">
+                <select class="select-flim">
+                    <option value="">Chọn rạp</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                </select>
+            </div>
+            <div class="select">
+                <select class="select-cinema">
+                    <option value="">Chọn suất chiếu</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                    <option value="">Tà chú cấm</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-buy">
+            <div class="form-buy-ticket">
+                <div class="img-ticket">
+                    <img src="./image/film/ta-chu-cam-poster.jpg" alt="">
+                </div>
+                <div class="text-ticket">
+                    <h3 class="name-flim">TÀ CHÚ CẤM (T18)</h3>
+                    <p class="name-cinema">CineStar Quốc Thanh</p>
+                    <div class="time-part">
+                        <div class="date">
+                            <p class="date-film">19/07/2023</p>
+                            <div class="time">
+                                <a href="./muave.html" style="color: aliceblue;">
+                                    <p class="time-flim">17:05</p>
+                                </a>
+                                <a href="./muave.html" style="color: aliceblue;">
+                                    <p class="time-flim">18:40</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <div class="gradien" style="margin-top: 35px;"></div>
+    <footer>
+        <div class="logo-footer">
+            <img src="./image/trang-100x100.png" alt="">
+        </div>
+        <div class="contact">
+            <div class="lk">
+                <div class="title-lk">
+                    <p>LIÊN KẾT</p>
+                    <img src="./image/scl_facebook.png" alt="">
+                    <img src="./image/scl_youtube.png" alt="">
+                    <p>HOTLINE</p>
+                    <h3>0123456789</h3>
+                </div>
+            </div>
+            <div class="lk">
+                <div class="title-cinema">
+                    <h3>HỆ THỐNG RẠP</h3>
+                    <p>CineStart Quốc Thanh</p>
+                    <p>CineStart Đà lạt</p>
+                    <p>CineStart Hai bà trưng (TP.HCM)</p>
+                    <p>CineStart Bình Dương (Sinh viên)</p>
+                    <p>CineStart Huế</p>
+                    <p>CineStart Mỹ Tho</p>
+                    <p>CineStart Kiên Giang</p>
+                    <p>CineStart Đức Trọng</p>
+                </div>
+            </div>
+            <div class="lk">
+                <div class="title-contact">
+                    <h3>CineStart</h3>
+                    <p>Phim đang chiếu</p>
+                    <p>Phim sắp chiếu</p>
+                    <p>Suất chiếu đặt biệt</p>
+                    <p>Lịch chiếu</p>
+                    <p>Khuyến mãi</p>
+
+                </div>
+            </div>
+            <div class="lk">
+                <div class="title-imformation">
+                    <h3>Thông tin</h3>
+                    <p>Tin tức</p>
+                    <p>Hỏi và đáp</p>
+                    <p>Liên hệ</p>
+                </div>
+            </div>
+            <div class="lk">
+                <div class="title-policy">
+                    <h3>Chính sách và quy định</h3>
+                    <p>Quy định chung</p>
+                    <p>Điều khoảng bảo mật</p>
+                    <p>Thông tin công ty</p>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <img src="./image/dolby2.png" alt="">
+            <img src="./image/crhistie.png" alt="">
+            <img src="./image/2d.jpg" alt="">
+            <img src="./image/3d.png" alt="">
+            <img src="./image/cinestar-coffee-02.png" alt="">
+        </div>
+        <div class="pay">
+            <p>Chấp nhận thanh toán</p>
+            <div class="pay-choose">
+                <img src="./image/napas-40.png" alt="">
+                <img src="./image/payment-visa.png" alt="">
+                <img src="./image/payment-mastercard.png" alt="">
+                <img src="./image/momo.jpg" alt="">
+            </div>
+        </div>
+        <div class="introduce">
+
+            <div class="write">
+                <img src="./image/dathongbao.png" alt="">
+            </div>
+            <p>CÔNG TY CỔ PHẦN GIẢI TRÍ PHÁT HÀNH PHIM – RẠP CHIẾU PHIM NGÔI SAO<br>
+                Địa chỉ: 135 Hai Bà Trưng, phường Bến Nghé, Quận 1, TP.HCM<br>
+                Giấy CNĐKDN số: 0312742744, đăng ký lần đầu ngày 18/04/2014, đăng ký thay đổi lần thứ 2 ngày
+                15/09/2014,
+                cấp bởi Sở KH&ĐT TP.HCM<br><br>
+                2015 © <strong>CINESTAR</strong>. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

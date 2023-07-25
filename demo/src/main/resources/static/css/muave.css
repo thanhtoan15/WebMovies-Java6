@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+}
+
+body {
+    background: rgb(34, 0, 27);
+    ;
+}
+
+:root {
+    --header-color: rgb(59, 0, 51);
+    --search-color: rgb(0, 0, 0);
+    --text-color: #fcfeff;
+    --text-regsiter: rgb(224, 13, 122);
+    --item-film: rgb(241, 135, 32);
+    --end-time: rgb(108, 67, 104);
+    --present-time: rgb(186, 52, 105);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.container {
+    max-width: 1360px;
+    margin: auto;
+    width: 100%;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.gradien {
+    background: linear-gradient(to right, rgb(98, 52, 177), rgb(4, 129, 190), rgb(0, 173, 93), rgb(221, 211, 45), rgb(209, 57, 62), rgb(235, 218, 227), rgb(98, 52, 177), rgb(4, 129, 190), rgb(0, 173, 93), rgb(221, 211, 45), rgb(209, 57, 62));
+    height: 5px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+}
+
+.search {
+    max-width: 240px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+    padding: 8px 15px;
+    background: var(--search-color);
+    border-radius: 4rem;
+    margin-right: 1rem;
+    height: fit-content;
+    margin-top: 10px;
+}
+
+.search .bx {
+    font-size: 1.1rem;
+    color: var(--text-color)
+}
+
+.bx {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    margin: 0 auto 0 0;
+}
+
+.search-box .bx:hover {
+    color: var(--search-color);
+
+}
+
+#search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    background: transparent;
+    font-size: 0.938rem;
+}
+
+.language {
+    display: flex;
+    background: rgb(186, 52, 105);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.language p {
+    margin: 10px 10px 15px 10px;
+    color: var(--text-color);
+
+}
+
+.user {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.right {
+    display: flex;
+    justify-content: end;
+}
+
+.navbar {
+    display: flex;
+    padding-top: 12px;
+}
+
+.nav-home {
+    display: flex;
+    background: rgb(224, 13, 122);
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.nav-home .bx {
+    font-size: 1.8rem;
+    margin: auto;
+}
+
+.menu {
+    background: rgb(224, 13, 122);
+    border-radius: 30px;
+    height: 44px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.menu li {
+    display: inline;
+    padding: 10px;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.nav-home {
+    color: var(--text-color);
+}
+
+
+.menu li:hover {
+    background: rgb(241, 135, 32);
+}
+
+.menu .start:hover {
+    background: rgb(241, 135, 32);
+    border-radius: 30px 0 0 30px;
+}
+
+.menu .end:hover {
+    background: rgb(241, 135, 32);
+    border-radius: 0 30px 30px 0;
+}
+
+
+.main-header {
+    width: 1519px;
+    height: 150px;
+}
+
+
+.order-flim {
+    background-image: url(https://cinestar.com.vn/catalog/view/theme/default/images/setup-bg.jpg);
+    width: 1519px;
+    height: 250px;
+
+
+}
+
+.cell-1 {
+    background: var(--item-film);
+    color: var(--text-color);
+    padding: 15px;
+}
+
+.cell-1 p {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.cell-2 {
+    background: var(--present-time);
+    color: var(--text-color);
+    padding: 15px;
+    width: 250px;
+}
+
+.cell-2 p {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.text-1 {
+    padding: 10px;
+    margin-left: 360px;
+}
+
+.order-infor {
+    margin-left: 370px;
+}
+
+.order-ticket {
+    background-image: url(https://cinestar.com.vn/catalog/view/theme/default/images/pattern.png);
+    height: 350px;
+    width: 1519px;
+    ;
+}
+
+.cell-3,
+.cell-4 {
+    background: var(--item-film);
+    text-transform: uppercase;
+    padding: 15px;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.order-ticket {
+    display: flex;
+    justify-content: center;
+}
+
+.order-ticket table {
+    margin-top: 20px;
+    height: 270px;
+    border: 1px solid var(--text-color);
+}
+
+.ticket-adult-couple {
+    padding: 15px;
+    font-size: 20px;
+}
+
+
+
+.ticket-adult-single {
+    padding: 15px;
+    font-size: 20px;
+}
+
+.buy-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.buy-amount .bx-minus {
+    font-size: 20px;
+}
+
+.buy-amount .bx-plus {
+    font-size: 20px;
+}
+
+.buy-amount input {
+    font-size: 16px;
+    width: 50px;
+    text-align: center;
+    border: 1px solid gray;
+    background: var(--text-color);
+}
+
+.buy-amount button {
+    outline: none;
+    border: 1px solid gray;
+    background: none;
+    cursor: pointer;
+}
+
+/* .btnPre {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.btnPre a {
+    background: var(--item-film);
+    padding: 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.btnPre a:hover {
+    background: var(--present-time);
+} */
+.buy-watercorn {
+    background-image: url(https://cinestar.com.vn/catalog/view/theme/default/images/pattern.png);
+    justify-content: center;
+    display: flex;
+}
+
+.table-watercorn {
+    width: 900px;
+}
+
+.title-watercorn {
+    background: var(--text-regsiter);
+    padding: 10px;
+    border-radius: 13px 13px 0px 0px;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.title-watercorn1 {
+    background: var(--text-regsiter);
+    padding: 10px;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.list-watercorn {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.minus-plus-watercorn .minus-plus-form,
+.img-watercorn,
+.text-watercorn,
+.total-watercorn {
+    /* border: 1px solid black; */
+    height: 102px;
+}
+
+.text-watercorn {
+    width: 480px;
+    padding: 10px;
+}
+
+.text-watercorn h3 {
+    color: var(--text-regsiter);
+}
+
+.minus-plus-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+}
+
+.minus-plus-form input {
+    width: 60px;
+    height: 29px;
+    outline: none;
+    border: none;
+    margin: 5px;
+    background: var(--text-color);
+    text-align: center;
+    font-size: 20px;
+}
+
+.minus-plus-form button {
+    border-radius: 50%;
+    padding: 3px;
+    width: 30px;
+    background: var(--text-regsiter);
+    outline: none;
+    border: none;
+
+}
+
+.minus-plus-form button .bx {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 900;
+
+}
+
+.total-watercorn {
+    width: 170px;
+    text-align: right;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.total-watercorn b {
+    font-size: 23px;
+}
+
+
+
+
+.order-chair {
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+.order-chair-list {
+    margin-top: 50px;
+}
+
+.projection-screen {
+    background: gainsboro;
+    text-transform: uppercase;
+    border-radius: 20px;
+    text-align: center;
+    width: 900px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-a,
+.row-b,
+.row-c {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.row-a .a01,
+.a02,
+.a03,
+.a04,
+.a05,
+.a06,
+.a07,
+.a08,
+.a09,
+.a10 {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid gainsboro;
+}
+
+.row-a .a01:hover,
+.a02:hover,
+.a03:hover,
+.a04:hover,
+.a05:hover,
+.a06:hover,
+.a07:hover,
+.a08:hover,
+.a09:hover,
+.a10:hover {
+    background: rgb(58, 78, 203);
+    cursor: pointer;
+}
+
+.row-b .b01,
+.b02,
+.b03,
+.b04,
+.b05,
+.b06,
+.b07,
+.b08,
+.b09,
+.b10 {
+    padding: 15.6px;
+    border: 1px solid gainsboro;
+    margin: 10px;
+}
+
+.row-b .b01:hover,
+.b02:hover,
+.b03:hover,
+.b04:hover,
+.b05:hover,
+.b06:hover,
+.b07:hover,
+.b08:hover,
+.b09:hover,
+.b10:hover {
+    background: rgb(58, 78, 203);
+    cursor: pointer;
+}
+
+.row-c .c01,
+.c02,
+.c03,
+.c04,
+.c05,
+.c06,
+.c07,
+.c08,
+.c09,
+.c10 {
+    padding: 14.2px;
+    border: 1px solid gainsboro;
+    margin: 10px;
+}
+
+.row-c .c01:hover,
+.c02:hover,
+.c03:hover,
+.c04:hover,
+.c05:hover,
+.c06:hover,
+.c07:hover,
+.c08:hover,
+.c09:hover,
+.c10:hover {
+    background: rgb(58, 78, 203);
+    cursor: pointer;
+}
+
+.a01-c {
+    background: var(--text-regsiter);
+    margin: 10px;
+    padding: 10px;
+    width: 130px;
+    text-align: center;
+}
+
+.a01-c:hover {
+    cursor: pointer;
+}
+
+.list-note-chair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-note-chair .chair-normal {
+    background: gainsboro;
+    height: 30px;
+    width: 80px;
+    margin: 10px;
+}
+
+.chair-couple {
+    background: var(--text-regsiter);
+    height: 30px;
+    width: 80px;
+    margin: 10px;
+}
+
+.chair-select {
+    background: rgb(0, 97, 51);
+    height: 30px;
+    width: 80px;
+    margin: 10px;
+}
+
+.chair-doing-select {
+    background: rgb(58, 78, 203);
+    height: 30px;
+    width: 80px;
+    margin: 10px;
+}
+
+.btn-pre-pay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-pre-pay a {
+    margin: 30px;
+    background: var(--item-film);
+    padding: 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.selected {
+    background: rgb(58, 78, 203);
+}
