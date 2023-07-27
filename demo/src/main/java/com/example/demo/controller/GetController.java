@@ -39,6 +39,6 @@ public class GetController {
 
     @RequestMapping("/ciner")
     public String index(){
-        return "index";
+        return "login";
     }
 }
