@@ -17,6 +17,6 @@ public class NhanVien implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     String tendangnhap;
-    int matkhau;
+    String matkhau;
     boolean quantri;
 }

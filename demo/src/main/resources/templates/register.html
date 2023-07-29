@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dkthanhvien.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+<header>
+    <div class="header-img">
+        <img src="./image/white-2018.png" alt="">
+    </div>
+</header>
+<main>
+    <div class="gradien"></div>
+    <div class="form-dk">
+        <div class="form">
+            <form th:action="@{/register}" method="post" enctype="multipart/form-data" th:object="${nhanvien_register}">
+                <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+                <p>Vui lòng nhập các thông tin</p>
+                <input class="input" type="text" name="tendangnhap" id="tendangnhap" placeholder="Tên đăng nhập hoặc email" required th:field="*{tendangnhap}"><br>
+                <input class="input" type="text" name="matkhau" id="matkhau"  placeholder="Mật khẩu" required th:field="*{matkhau}"><br>
+                <input class="input" type="text" name="" id="repeatPass" placeholder="Nhập lại mật khẩu" required th:name="repeatPass"><br>
+                <input class="remember" type="radio" name="remember" id="quantri" > Admin <br>
+                <button>ĐĂNG KÝ</button>
+            </form>
+        </div>
+    </div>
+</main>
+<div class="gradien"></div>
+<footer>
+    <div class="logo-footer">
+        <img src="./image/trang-100x100.png" alt="">
+    </div>
+    <div class="contact">
+        <div class="lk">
+            <div class="title-lk">
+                <p>LIÊN KẾT</p>
+                <img src="./image/scl_facebook.png" alt="">
+                <img src="./image/scl_youtube.png" alt="">
+                <p>HOTLINE</p>
+                <h3>0123456789</h3>
+            </div>
+        </div>
+        <div class="lk">
+            <div class="title-cinema">
+                <h3>HỆ THỐNG RẠP</h3>
+                <p>CineStart Quốc Thanh</p>
+                <p>CineStart Đà lạt</p>
+                <p>CineStart Hai bà trưng (TP.HCM)</p>
+                <p>CineStart Bình Dương (Sinh viên)</p>
+                <p>CineStart Huế</p>
+                <p>CineStart Mỹ Tho</p>
+                <p>CineStart Kiên Giang</p>
+                <p>CineStart Đức Trọng</p>
+            </div>
+        </div>
+        <div class="lk">
+            <div class="title-contact">
+                <h3>CineStart</h3>
+                <p>Phim đang chiếu</p>
+                <p>Phim sắp chiếu</p>
+                <p>Suất chiếu đặt biệt</p>
+                <p>Lịch chiếu</p>
+                <p>Khuyến mãi</p>
+
+            </div>
+        </div>
+        <div class="lk">
+            <div class="title-imformation">
+                <h3>Thông tin</h3>
+                <p>Tin tức</p>
+                <p>Hỏi và đáp</p>
+                <p>Liên hệ</p>
+            </div>
+        </div>
+        <div class="lk">
+            <div class="title-policy">
+                <h3>Chính sách và quy định</h3>
+                <p>Quy định chung</p>
+                <p>Điều khoảng bảo mật</p>
+                <p>Thông tin công ty</p>
+            </div>
+        </div>
+    </div>
+    <div class="category">
+        <img src="./image/dolby2.png" alt="">
+        <img src="./image/crhistie.png" alt="">
+        <img src="./image/2d.jpg" alt="">
+        <img src="./image/3d.png" alt="">
+        <img src="./image/cinestar-coffee-02.png" alt="">
+    </div>
+    <div class="pay">
+        <p>Chấp nhận thanh toán</p>
+        <div class="pay-choose">
+            <img src="./image/napas-40.png" alt="">
+            <img src="./image/payment-visa.png" alt="">
+            <img src="./image/payment-mastercard.png" alt="">
+            <img src="./image/momo.jpg" alt="">
+        </div>
+    </div>
+    <div class="introduce">
+
+        <div class="write">
+            <img src="./image/dathongbao.png" alt="">
+        </div>
+        <p>CÔNG TY CỔ PHẦN GIẢI TRÍ PHÁT HÀNH PHIM – RẠP CHIẾU PHIM NGÔI SAO<br>
+            Địa chỉ: 135 Hai Bà Trưng, phường Bến Nghé, Quận 1, TP.HCM<br>
+            Giấy CNĐKDN số: 0312742744, đăng ký lần đầu ngày 18/04/2014, đăng ký thay đổi lần thứ 2 ngày
+            15/09/2014,
+            cấp bởi Sở KH&ĐT TP.HCM<br><br>
+            2015 © <strong>CINESTAR</strong>. All rights reserved.
+        </p>
+    </div>
+</footer>
+</body>
+
+</html>
