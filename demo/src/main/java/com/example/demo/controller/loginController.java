@@ -86,5 +86,44 @@ public class loginController {
         }
     }
 
+    @GetMapping("/changepassword")
+    public String changePassWord(){
+        return "changepassword";
+    }
+    @PostMapping("changepassword")
+    public String changePassWord(Model model,
+                                 @ModelAttribute("nhanvien_changepass")NhanVien nhanVien_changepass,
+                                 @RequestParam("tendangnhap")String tendangnhap,
+                                 @RequestParam("matkhau")String matkhau,
+                                 @RequestParam("repeatPass")String repeatPass,
+                                 @RequestParam("repeatPassagain")String repeatPassagain){
+        Optional<NhanVien> nhanvien_thaydoi = dao.findByNhanVien(tendangnhap, matkhau);
+        if(nhanvien_thaydoi.isPresent()){
+            System.out.println("ten dang nhap"+nhanvien_thaydoi.get().getTendangnhap());
+            NhanVien nhanvien_matkhau = nhanvien_thaydoi.get();
+            if(nhanVien_changepass.getTendangnhap().equals(tendangnhap)){
+                if(nhanVien_changepass.getMatkhau().equals(matkhau)){
+                    if(repeatPass.equals(repeatPassagain)){
+                        nhanvien_matkhau.setMatkhau(repeatPass);
+                        dao.save(nhanvien_matkhau);
+                        model.addAttribute("success","Thay đổi mật khẩu thành công");
+                        return "changepassword";
+                    }else {
+                        model.addAttribute("error","Mật khẩu không trùng khớp");
+                        return "changepassword";
+                    }
+                }else {
+                    model.addAttribute("erorr","Mật khẩu cũ không tồn tại");
+                    return "changepassword";
+                }
+            }else {
+                model.addAttribute("erorr","Tên đăng nhập không tồn tại");
+                return "changepassword";
+            }
+        }else {
+            model.addAttribute("erorr","Không tìm thấy nhân viên này");
+            return "changepassword";
+        }
+    }
 
 }

@@ -12,5 +12,4 @@ public interface NhanVienDAO extends JpaRepository<NhanVien, String> {
     @Query("select o from  NhanVien o where  o.tendangnhap = :tendangnhap")
     Optional<NhanVien> findByNhanVienByTenDangNhap(String tendangnhap);
     NhanVien save(NhanVien nhanvien);
-    Optional<NhanVien> findByEmail(String email);
 }
